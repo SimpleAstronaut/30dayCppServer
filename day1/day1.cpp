@@ -6,6 +6,7 @@
 #include <sys/socket.h>
 #include <arpa/inet.h>  //这个头文件包含了<netinet/in.h>，不用再次包含了
 #include <string.h>
+#include <stdio.h>
 
 int main(){
 
@@ -45,4 +46,5 @@ int main(){
   printf("new client fd %d! IP: %s Port: %d\n", clnt_sockfd, inet_ntoa(clnt_addr.sin_addr), ntohs(clnt_addr.sin_port));
   //要接受一个客户端连接，需要使用accept函数。对于每一个客户端，我们在接受连接时也需要保存客户端的socket地址信息
 
+  return 0;
 }
